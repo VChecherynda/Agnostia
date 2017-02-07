@@ -2,6 +2,8 @@
 body {
   background: #222;
   color: #fff; }
+  body p {
+    font: 14px/1.5 'OpenSans-Regular'; }
   body a:hover {
     color: #fff;
     text-decoration: none; }
@@ -12,7 +14,8 @@ section {
   overflow: hidden; }
   section header #logo {
     padding-top: 8px;
-    font: 50px/1.5 'Damion', sans-serif; }
+    font: 50px/1.5 'Damion', sans-serif;
+    text-align: left; }
   section header ul {
     float: right;
     margin: 0;
@@ -80,7 +83,7 @@ section {
         left: 48px;
         background: url(../img/arrow-left.png); }
       section#home .owl-carousel .owl-dots {
-        margin-top: 20%; }
+        margin-top: 15%; }
         section#home .owl-carousel .owl-dots .owl-dot.active span {
           background-color: #74c7d5; }
         section#home .owl-carousel .owl-dots .owl-dot span {
@@ -88,3 +91,40 @@ section {
           height: 20px;
           margin-right: 40px;
           background: rgba(255, 255, 255, 0.5); }
+  section#services {
+    background: url(../img/bg-services.jpg);
+    background-size: cover;
+    text-align: center; }
+    section#services ul li:hover, section#services ul li.active {
+      background-color: #df5c64; }
+    section#services .header {
+      margin-top: 110px;
+      margin-bottom: 120px; }
+      section#services .header h1 {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font: 60px/1 'OpenSans-Light', sans-serif; }
+      section#services .header h2 {
+        text-transform: uppercase;
+        font: 20px/1 'OpenSans-Regular', sans-serif; }
+        section#services .header h2 span {
+          color: #ec9da2; }
+      section#services .header p {
+        font-size: 14px; }
+    section#services .services-box-sm {
+      padding: 40px 30px;
+      background: #c8535a; }
+      section#services .services-box-sm .icon {
+        display: inline-block;
+        margin-bottom: 25px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        border: 5px solid #fff; }
+        section#services .services-box-sm .icon img {
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          border: 5px solid #c8535a; }
+      section#services .services-box-sm h4 {
+        margin-bottom: 45px;
+        text-transform: uppercase;
+        font: 30px/1 'OpenSans-Light', sans-serif; }

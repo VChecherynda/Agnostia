@@ -14,6 +14,9 @@ body
 	background: #222
 	color: #fff
 
+	p
+		font: 14px/1.5 'OpenSans-Regular';
+
 	a:hover 
 		color: #fff
 		text-decoration: none
@@ -30,6 +33,7 @@ section
 
 			padding-top: 8px
 			font: 50px/1.5 'Damion', sans-serif
+			text-align: left 
 	
 		ul
 			float: right
@@ -67,6 +71,7 @@ section
 			height: 170px
 			top: 50%
 			transform: translateY(-100%)
+
 			.owl-stage-outer
 
 				.item
@@ -114,7 +119,7 @@ section
 				background: url(../img/arrow-left.png)	
 
 			.owl-dots
-				margin-top: 20% 	
+				margin-top: 15% 	
 
 				.owl-dot
 
@@ -129,6 +134,54 @@ section
 						margin-right: 40px
 						background: rgba(255,255,255,0.5)
 
+	&#services	
+		background: url(../img/bg-services.jpg)
+		background-size: cover
+		text-align: center
 
+		ul
+	
+			li
+
+				&:hover,&.active
+					background-color: $color-services
 		
+		.header
+			margin-top: 110px
+			margin-bottom: 120px
 
+			h1
+				margin-bottom: 40px
+				text-transform: uppercase
+				font: 60px/1 'OpenSans-Light', sans-serif
+
+			h2
+				text-transform: uppercase
+				font: 20px/1 'OpenSans-Regular', sans-serif
+
+				span 
+					color: #ec9da2
+
+			p
+				font-size: 14px
+
+		.services-box-sm
+			padding: 40px 30px
+			background: #c8535a		
+
+			.icon
+				display: inline-block
+				margin-bottom: 25px
+				border-radius: 50%
+				border: 5px solid #fff
+			
+				img
+					border-radius: 50%
+					border: 5px solid #c8535a
+
+			h4
+				margin-bottom: 45px
+				text-transform: uppercase
+				font: 30px/1 'OpenSans-Light', sans-serif
+					
+			
