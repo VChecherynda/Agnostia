@@ -1,0 +1,90 @@
+/*--- Colors ---*/
+body {
+  background: #222;
+  color: #fff; }
+  body a:hover {
+    color: #fff;
+    text-decoration: none; }
+
+section {
+  height: 1000px;
+  margin: 0 auto;
+  overflow: hidden; }
+  section header #logo {
+    padding-top: 8px;
+    font: 50px/1.5 'Damion', sans-serif; }
+  section header ul {
+    float: right;
+    margin: 0;
+    padding: 0; }
+    section header ul li {
+      float: left;
+      width: 100px;
+      padding: 37px 0 13px 0;
+      list-style: none;
+      text-align: center;
+      -webkit-border-radius: 0 0 4px 4px;
+              border-radius: 0 0 4px 4px; }
+      section header ul li a {
+        font: 18px/1.5 'Regular', sans-serif;
+        font-size: 18px;
+        color: #fff; }
+    section header ul li + li {
+      margin-left: 8px; }
+  section#home {
+    background: url("../img/bg-home.jpg");
+    background-size: cover; }
+    section#home ul li:hover, section#home ul li.active {
+      background-color: #74c7d5; }
+    section#home .owl-carousel {
+      height: 170px;
+      top: 50%;
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%); }
+      section#home .owl-carousel .owl-stage-outer .item {
+        display: block;
+        width: 840px;
+        height: 170px;
+        margin: 0 auto;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        background: rgba(255, 255, 255, 0.3); }
+        section#home .owl-carousel .owl-stage-outer .item h1 {
+          display: inline-block;
+          text-transform: uppercase;
+          text-align: right;
+          vertical-align: top;
+          color: #74c7d5; }
+          section#home .owl-carousel .owl-stage-outer .item h1:nth-child(1) {
+            width: 45%;
+            font: 60px/1 'OpenSans-Light', sans-serif; }
+            section#home .owl-carousel .owl-stage-outer .item h1:nth-child(1) span {
+              text-transform: none; }
+          section#home .owl-carousel .owl-stage-outer .item h1:nth-child(2) {
+            width: 49%;
+            font: 140px/1 'OpenSans-Bold', sans-serif;
+            line-height: 0.8; }
+      section#home .owl-carousel .owl-next,
+      section#home .owl-carousel .owl-prev {
+        width: 34px;
+        height: 56px;
+        position: absolute;
+        top: 0; }
+      section#home .owl-carousel .owl-next {
+        top: 57px;
+        right: 48px;
+        background: url(../img/arrow-right.png); }
+      section#home .owl-carousel .owl-prev {
+        top: 57px;
+        left: 48px;
+        background: url(../img/arrow-left.png); }
+      section#home .owl-carousel .owl-dots {
+        margin-top: 20%; }
+        section#home .owl-carousel .owl-dots .owl-dot.active span {
+          background-color: #74c7d5; }
+        section#home .owl-carousel .owl-dots .owl-dot span {
+          width: 20px;
+          height: 20px;
+          margin-right: 40px;
+          background: rgba(255, 255, 255, 0.5); }
