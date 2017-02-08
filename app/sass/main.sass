@@ -55,6 +55,42 @@ section
 		
 			li+ li
 				margin-left: 8px;
+
+	.header_box
+			margin-top: 110px
+			margin-bottom: 120px
+			text-align: center
+
+			h1
+				margin-bottom: 40px
+				text-transform: uppercase
+				font: 60px/1 'OpenSans-Light', sans-serif
+
+			h2
+				text-transform: uppercase
+				font: 20px/1 'OpenSans-Regular', sans-serif
+
+				span 
+					color: #ec9da2
+
+			p
+				font-size: 14px
+
+	.services-box-sm
+			padding: 40px 30px
+			text-align: center
+
+			h4
+				margin-bottom: 45px
+				text-transform: uppercase
+
+			.icon
+				display: inline-block
+				margin-bottom: 25px
+				border-radius: 50%
+							
+				img
+					border-radius: 50%
 				
 	&#home
 		background: url('../img/bg-home.jpg') 	
@@ -136,8 +172,7 @@ section
 
 	&#services	
 		background: url(../img/bg-services.jpg)
-		background-size: cover
-		text-align: center
+		background-size: cover	
 
 		ul
 	
@@ -146,42 +181,107 @@ section
 				&:hover,&.active
 					background-color: $color-services
 		
-		.header
-			margin-top: 110px
-			margin-bottom: 120px
-
-			h1
-				margin-bottom: 40px
-				text-transform: uppercase
-				font: 60px/1 'OpenSans-Light', sans-serif
-
-			h2
-				text-transform: uppercase
-				font: 20px/1 'OpenSans-Regular', sans-serif
-
-				span 
-					color: #ec9da2
-
-			p
-				font-size: 14px
-
+		
 		.services-box-sm
-			padding: 40px 30px
 			background: #c8535a		
 
+			h4
+				font: 30px/1 'OpenSans-Light', sans-serif
+
 			.icon
-				display: inline-block
-				margin-bottom: 25px
-				border-radius: 50%
 				border: 5px solid #fff
 			
 				img
-					border-radius: 50%
 					border: 5px solid #c8535a
 
+	&#about
+		background: url(../img/bg-about.jpg)
+		background-size: cover	
+
+		.header_box
+			margin-bottom: 58px
+
+		ul
+	
+			li
+
+				&:hover,&.active
+					background-color: $color-about
+
+		.box_bulb
+			width: 276px	
+			margin: 0 auto 70px auto
+			padding: 17px 42px 15px 42px
+			text-align: center
+			border-radius: 4px
+			background: #A1CA6C
+			position: relative
+
+			&:after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				margin: 0 auto
+				border-left: 15px solid transparent
+				border-right: 15px solid transparent
+				border-top: 15px solid #A1CA6C
+				position: absolute
+				right: 0
+				left: 0
+				bottom: -15px
+
+			p
+				margin: 0
+				font: 25px/1 'OpenSans-Bold', sans-serif
+
+
+		.services-box-sm
+			background: rgba(76,63,75,0.5)	
+
 			h4
-				margin-bottom: 45px
-				text-transform: uppercase
-				font: 30px/1 'OpenSans-Light', sans-serif
-					
+				margin-bottom: 0
+				font: 25px/1 'OpenSans-Bold', sans-serif	
+
+			h5
+				margin-bottom: 37px
+				font: 14px/1 'OpenSans-Bold', sans-serif	
+				color: #a1ca6c
+
+			.social
+
+				li
+					display: inline-block
+
+					a
+						display: inline-block
+						width: 31px
+						height: 31px
+
+				$param : 31px
+
+				@for $i from 1 through 4 
+				    li:nth-child(#{$i}) a 
+				    	background: url('../img/bg-social.png') #{$param * ($i - 1) } 0
+				    li:nth-child(#{$i}):hover a 
+				    	background: url('../img/bg-social.png') #{$param * ($i - 1) } #{$param}	
+	
+				li + li
+					margin-left: 19px
 			
+			.icon
+				
+				width: 155px
+				height: 155px
+				background: url('../img/about_icon.jpg')
+				border: 5px solid #A1859E
+
+		.services-box-sm:hover
+			background: rgba(76,63,75,1)	
+
+			h5
+				color: #ff8973
+
+			.icon
+				background: url('../img/about_icon_hover.jpg')
+

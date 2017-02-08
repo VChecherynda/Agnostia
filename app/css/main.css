@@ -34,6 +34,35 @@ section {
         color: #fff; }
     section header ul li + li {
       margin-left: 8px; }
+  section .header_box {
+    margin-top: 110px;
+    margin-bottom: 120px;
+    text-align: center; }
+    section .header_box h1 {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      font: 60px/1 'OpenSans-Light', sans-serif; }
+    section .header_box h2 {
+      text-transform: uppercase;
+      font: 20px/1 'OpenSans-Regular', sans-serif; }
+      section .header_box h2 span {
+        color: #ec9da2; }
+    section .header_box p {
+      font-size: 14px; }
+  section .services-box-sm {
+    padding: 40px 30px;
+    text-align: center; }
+    section .services-box-sm h4 {
+      margin-bottom: 45px;
+      text-transform: uppercase; }
+    section .services-box-sm .icon {
+      display: inline-block;
+      margin-bottom: 25px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+      section .services-box-sm .icon img {
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
   section#home {
     background: url("../img/bg-home.jpg");
     background-size: cover; }
@@ -93,38 +122,90 @@ section {
           background: rgba(255, 255, 255, 0.5); }
   section#services {
     background: url(../img/bg-services.jpg);
-    background-size: cover;
-    text-align: center; }
+    background-size: cover; }
     section#services ul li:hover, section#services ul li.active {
       background-color: #df5c64; }
-    section#services .header {
-      margin-top: 110px;
-      margin-bottom: 120px; }
-      section#services .header h1 {
-        margin-bottom: 40px;
-        text-transform: uppercase;
-        font: 60px/1 'OpenSans-Light', sans-serif; }
-      section#services .header h2 {
-        text-transform: uppercase;
-        font: 20px/1 'OpenSans-Regular', sans-serif; }
-        section#services .header h2 span {
-          color: #ec9da2; }
-      section#services .header p {
-        font-size: 14px; }
     section#services .services-box-sm {
-      padding: 40px 30px;
       background: #c8535a; }
+      section#services .services-box-sm h4 {
+        font: 30px/1 'OpenSans-Light', sans-serif; }
       section#services .services-box-sm .icon {
-        display: inline-block;
-        margin-bottom: 25px;
-        -webkit-border-radius: 50%;
-                border-radius: 50%;
         border: 5px solid #fff; }
         section#services .services-box-sm .icon img {
-          -webkit-border-radius: 50%;
-                  border-radius: 50%;
           border: 5px solid #c8535a; }
-      section#services .services-box-sm h4 {
-        margin-bottom: 45px;
-        text-transform: uppercase;
-        font: 30px/1 'OpenSans-Light', sans-serif; }
+  section#about {
+    background: url(../img/bg-about.jpg);
+    background-size: cover; }
+    section#about .header_box {
+      margin-bottom: 58px; }
+    section#about ul li:hover, section#about ul li.active {
+      background-color: #91778e; }
+    section#about .box_bulb {
+      width: 276px;
+      margin: 0 auto 70px auto;
+      padding: 17px 42px 15px 42px;
+      text-align: center;
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background: #A1CA6C;
+      position: relative; }
+      section#about .box_bulb:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        margin: 0 auto;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #A1CA6C;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -15px; }
+      section#about .box_bulb p {
+        margin: 0;
+        font: 25px/1 'OpenSans-Bold', sans-serif; }
+    section#about .services-box-sm {
+      background: rgba(76, 63, 75, 0.5); }
+      section#about .services-box-sm h4 {
+        margin-bottom: 0;
+        font: 25px/1 'OpenSans-Bold', sans-serif; }
+      section#about .services-box-sm h5 {
+        margin-bottom: 37px;
+        font: 14px/1 'OpenSans-Bold', sans-serif;
+        color: #a1ca6c; }
+      section#about .services-box-sm .social li {
+        display: inline-block; }
+        section#about .services-box-sm .social li a {
+          display: inline-block;
+          width: 31px;
+          height: 31px; }
+      section#about .services-box-sm .social li:nth-child(1) a {
+        background: url("../img/bg-social.png") 0px 0; }
+      section#about .services-box-sm .social li:nth-child(1):hover a {
+        background: url("../img/bg-social.png") 0px 31px; }
+      section#about .services-box-sm .social li:nth-child(2) a {
+        background: url("../img/bg-social.png") 31px 0; }
+      section#about .services-box-sm .social li:nth-child(2):hover a {
+        background: url("../img/bg-social.png") 31px 31px; }
+      section#about .services-box-sm .social li:nth-child(3) a {
+        background: url("../img/bg-social.png") 62px 0; }
+      section#about .services-box-sm .social li:nth-child(3):hover a {
+        background: url("../img/bg-social.png") 62px 31px; }
+      section#about .services-box-sm .social li:nth-child(4) a {
+        background: url("../img/bg-social.png") 93px 0; }
+      section#about .services-box-sm .social li:nth-child(4):hover a {
+        background: url("../img/bg-social.png") 93px 31px; }
+      section#about .services-box-sm .social li + li {
+        margin-left: 19px; }
+      section#about .services-box-sm .icon {
+        width: 155px;
+        height: 155px;
+        background: url("../img/about_icon.jpg");
+        border: 5px solid #A1859E; }
+    section#about .services-box-sm:hover {
+      background: #4c3f4b; }
+      section#about .services-box-sm:hover h5 {
+        color: #ff8973; }
+      section#about .services-box-sm:hover .icon {
+        background: url("../img/about_icon_hover.jpg"); }
