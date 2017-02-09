@@ -208,4 +208,5 @@ section {
       section#about .services-box-sm:hover h5 {
         color: #ff8973; }
       section#about .services-box-sm:hover .icon {
-        background: url("../img/about_icon_hover.jpg"); }
+        background: url("../img/about_icon_hover.jpg");
+        border: 5px solid #DF5C64; }
