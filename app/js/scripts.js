@@ -14,20 +14,27 @@ $(document).ready(function(){
 		type:'image'
 	});
 
-	/*--- (Portfokio) Tabs ---*/
+	/*--- (Portfolio) Tabs ---*/
 
 	var tab_elem =  $('.tab_content_elem');
 	var tab_content = $('.tab_content');
 
-	function MarginRight(px){
-		tab_content.each(function(){
-			$(this).children().css({'margin-right':' ' + px + 'px'});
-		})
+	function marginRight(elements, count){
+		elements.each(function(index){
+			elements[index].style.marginRight = count+"px";
+		});
+
+		marginRightZero(elements);
+		 
 	};
 
-	function MarginRightZero(){
+	function marginRightZero(elements){
 		var elementsQuantity = Math.ceil( tab_content.width() / tab_elem.width() - 1) ;
-		tab_content.children()+$(':nth-child('+elementsQuantity+'n)').css('margin-right','0');
+		elements.each(function(index){
+		 	if ( ( index + 1 ) % elementsQuantity === 0 ) {
+		 		elements[index].style.marginRight = "0";
+			};
+		});
 	};
 
 	function addTabContent() {
@@ -44,24 +51,23 @@ $(document).ready(function(){
 					$(this).hide();
 				} else {
 					$(this).show();
+					marginRight(tab_elem, 20);
 				}
-			})
+			});
 
 			tabClass.css('display','block');	
 
-			MarginRight(20);
-		  	MarginRightZero();	
+			marginRight(tabClass,20);
 
 		});
 	};
 
+	addTabContent(); 
+
 	$(window).resize(function() {
-		MarginRight(20);
-	  	MarginRightZero();
+		marginRight(tab_elem, 20);
 	});
 
-	addTabContent(); 
 	
 
 });
-
