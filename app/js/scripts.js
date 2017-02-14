@@ -16,37 +16,36 @@ $(document).ready(function(){
 
 	/*--- (Portfolio) Tabs ---*/
 
-	var tab_elem =  $('.tab_content_elem');
-	var tab_content = $('.tab_content');
+	let tab_elem =  $('.tab_content_elem');
+	let tab_content = $('.tab_content');
 
-	function marginRight(elements, count){
-		elements.each(function(index){
-			elements[index].style.marginRight = count+"px";
-		});
+	var marginRight = (elements, count) => {
+
+		elements.each( (index) => { elements[index].style.marginRight = count+"px" } );
 
 		marginRightZero(elements);
 		 
 	};
 
-	function marginRightZero(elements){
-		var elementsQuantity = Math.ceil( tab_content.width() / tab_elem.width() - 1) ;
-		elements.each(function(index){
+	var marginRightZero = (elements) => {
+		let elementsQuantity = Math.ceil( tab_content.width() / tab_elem.width() - 1) ;
+		elements.each( (index) => {
 		 	if ( ( index + 1 ) % elementsQuantity === 0 ) {
 		 		elements[index].style.marginRight = "0";
 			};
 		});
 	};
 
-	function addTabContent() {
+	var addTabContent = () => {
 	
-		$('.tab_links ul li a').click(function(e){
+		$('.tab_links ul li a').click( function(e) {
 			
-			var tab_id = $(this).attr('data-tab');
-			var tabClass = $('.'+ tab_id);
+			let tab_id = $(this).attr('data-tab');
+			let tabClass = $('.'+ tab_id);
 
 			e.preventDefault();
 
-			tab_content.children().each(function(){
+			tab_content.children().each( function() {
 				if(tab_id != 'all') {
 					$(this).hide();
 				} else {
@@ -64,7 +63,7 @@ $(document).ready(function(){
 
 	addTabContent(); 
 
-	$(window).resize(function() {
+	$(window).resize( () => {
 		marginRight(tab_elem, 20);
 	});
 
