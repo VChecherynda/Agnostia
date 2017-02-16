@@ -7,8 +7,32 @@ $color-about-popup: #91778e
 $color-work: #a1ca6c
 $color-work-portfolio-menu-hover: #a1ca6c
 $color-contact: #82c8bd
+$color-contact-subHeader: #c0dfda
+$color-contact-info: #d0efea
+$color-contact-bg-form: #68a097
 $color-contact-button: #df5c64
 $color-contact-button-shadow: #b24a50
+
+/*--- Var ---*/
+
+@mixin placeholder()
+  input::-webkit-input-placeholder
+    @content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
+  textarea::-webkit-input-placeholder
+    @content
+  textarea:-moz-placeholder
+    @content
+  textarea::-moz-placeholder
+    @content
+  textarea:-ms-input-placeholder
+    @content    
+
 
 body
 	background: #222
@@ -21,7 +45,7 @@ body
 	p
 		font: 14px/1.5 'OpenSans-Regular';
 
-	a:hover 
+	a:hover, a:focus 
 		color: #fff
 		text-decoration: none
 
@@ -400,7 +424,126 @@ section
 				
 					&:nth-child(4n)
 						margin-right: 0	
-					
-.mfp-zoom-out-cur .mfp-image-holder .mfp-close 
-    cursor: pointer
+
+	&#contact
+		margin-bottom: 150px
+		background: url('../img/bg-contact.jpg')
+		background-size: cover	
+
+		p
+			margin: 0
+			font-size: 16px
+
+		header
+
+			ul
 			
+				li
+
+					&:hover,&.active
+						background-color: $color-contact
+
+		h2
+			margin-left: 15px
+			margin-bottom: 35px
+			font: 30px/1 'OpenSans-Light' , sans-serif
+
+		.street	
+			margin-bottom: 75px 
+			
+			h4
+				margin-bottom: 15px
+				font: 20px/1 'OpenSans-Bold', sans-serif
+				color: $color-contact-subHeader
+					
+		.info
+			width: 200px
+
+			p 	
+				display: inline-block
+				width: 70px
+				color: $color-contact-info
+
+			span
+				
+				a
+					color: #fff
+					text-decoration: underline
+
+					&:hover
+						text-decoration: none
+
+		.map
+			width: 260px
+			height: 220px
+			border-radius: 3px
+			background: url('../img/map.jpg')
+
+		form
+			text-align: center
+
+			input[type="text"],
+			input[type="button"],
+			textarea 
+				padding: 15px 20px 
+				border: 0
+				outline: 0
+				font-family: 'La'
+				color: #b5b5b5
+				background: $color-contact-bg-form
+
+			input[type="text"]:focus,
+			textarea:focus 
+				background: #fff 	
+
+			input[type="text"]
+				width: 260px
+				height: 40px
+				margin-bottom: 20px
+				border-radius: 3px
+				font-size: 100%
+
+				&:first-child
+					margin-right: 15px		
+
+			input[type="button"]
+				width: 260px
+				height: 50px
+				border-radius: 3px
+				background: $color-contact-button
+				box-shadow: 0 5px 0 $color-contact-button-shadow
+				text-transform: uppercase
+				font: 30px/0.5 'OpenSans-Bold', sans-serif
+				color: #fff
+
+				&:active
+					box-shadow: 0 2px 0 $color-contact-button-shadow
+					transform: translateY(3px);
+
+			textarea
+				width: 540px
+				height: 160px		
+				margin-bottom: 30px
+				border-radius: 3px
+
+			@include placeholder()	
+				font-family: 'OpenSans-Regular', sans-serif	
+				color: $color-contact
+
+.social_links
+	margin-top: -150px
+	padding: 45px 0
+	background: #68a097
+	
+	ul
+		text-align: center
+
+		li
+			display: inline-block
+			width: 60px
+			height: 60px
+			background: #82c8bd
+
+		li + li
+			margin-left: 40px	
+

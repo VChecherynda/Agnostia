@@ -1,4 +1,5 @@
 /*--- Colors ---*/
+/*--- Var ---*/
 body {
   background: #222;
   color: #fff; }
@@ -7,7 +8,7 @@ body {
     padding: 0; }
   body p {
     font: 14px/1.5 'OpenSans-Regular'; }
-  body a:hover {
+  body a:hover, body a:focus {
     color: #fff;
     text-decoration: none; }
 
@@ -298,6 +299,123 @@ section {
             z-index: 999; }
           section#work .gallery .tab_content .tab_content_elem:nth-child(4n) {
             margin-right: 0; }
+  section#contact {
+    margin-bottom: 150px;
+    background: url("../img/bg-contact.jpg");
+    background-size: cover; }
+    section#contact p {
+      margin: 0;
+      font-size: 16px; }
+    section#contact header ul li:hover, section#contact header ul li.active {
+      background-color: #82c8bd; }
+    section#contact h2 {
+      margin-left: 15px;
+      margin-bottom: 35px;
+      font: 30px/1 'OpenSans-Light' , sans-serif; }
+    section#contact .street {
+      margin-bottom: 75px; }
+      section#contact .street h4 {
+        margin-bottom: 15px;
+        font: 20px/1 'OpenSans-Bold', sans-serif;
+        color: #c0dfda; }
+    section#contact .info {
+      width: 200px; }
+      section#contact .info p {
+        display: inline-block;
+        width: 70px;
+        color: #d0efea; }
+      section#contact .info span a {
+        color: #fff;
+        text-decoration: underline; }
+        section#contact .info span a:hover {
+          text-decoration: none; }
+    section#contact .map {
+      width: 260px;
+      height: 220px;
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      background: url("../img/map.jpg"); }
+    section#contact form {
+      text-align: center; }
+      section#contact form input[type="text"],
+      section#contact form input[type="button"],
+      section#contact form textarea {
+        padding: 15px 20px;
+        border: 0;
+        outline: 0;
+        font-family: 'La';
+        color: #b5b5b5;
+        background: #68a097; }
+      section#contact form input[type="text"]:focus,
+      section#contact form textarea:focus {
+        background: #fff; }
+      section#contact form input[type="text"] {
+        width: 260px;
+        height: 40px;
+        margin-bottom: 20px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        font-size: 100%; }
+        section#contact form input[type="text"]:first-child {
+          margin-right: 15px; }
+      section#contact form input[type="button"] {
+        width: 260px;
+        height: 50px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        background: #df5c64;
+        -webkit-box-shadow: 0 5px 0 #b24a50;
+                box-shadow: 0 5px 0 #b24a50;
+        text-transform: uppercase;
+        font: 30px/0.5 'OpenSans-Bold', sans-serif;
+        color: #fff; }
+        section#contact form input[type="button"]:active {
+          -webkit-box-shadow: 0 2px 0 #b24a50;
+                  box-shadow: 0 2px 0 #b24a50;
+          -webkit-transform: translateY(3px);
+              -ms-transform: translateY(3px);
+                  transform: translateY(3px); }
+      section#contact form textarea {
+        width: 540px;
+        height: 160px;
+        margin-bottom: 30px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px; }
+      section#contact form input::-webkit-input-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form input:-moz-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form input::-moz-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form input:-ms-input-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form textarea::-webkit-input-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form textarea:-moz-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form textarea::-moz-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
+      section#contact form textarea:-ms-input-placeholder {
+        font-family: 'OpenSans-Regular', sans-serif;
+        color: #82c8bd; }
 
-.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: pointer; }
+.social_links {
+  margin-top: -150px;
+  padding: 45px 0;
+  background: #68a097; }
+  .social_links ul {
+    text-align: center; }
+    .social_links ul li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #82c8bd; }
+    .social_links ul li + li {
+      margin-left: 40px; }

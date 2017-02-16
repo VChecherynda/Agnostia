@@ -16,57 +16,91 @@ $(document).ready(function(){
 
 	/*--- (Portfolio) Tabs ---*/
 
-	let tab_elem =  $('.tab_content_elem');
-	let tab_content = $('.tab_content');
+	;(function($){
 
-	var marginRight = (elements, count) => {
+		let defaults = {
+			tab_elem: $('.tab_content_elem'),
+			tab_content: $('.tab_content'),
+			tab_links: $('.tab_links ul li a')
+		}
 
-		elements.each( (index) => { elements[index].style.marginRight = count+"px" } );
+		$.fn.galleryCollection = function(options) {
 
-		marginRightZero(elements);
-		 
-	};
+			console.log(this);
 
-	var marginRightZero = (elements) => {
-		let elementsQuantity = Math.ceil( tab_content.width() / tab_elem.width() - 1) ;
-		elements.each( (index) => {
-		 	if ( ( index + 1 ) % elementsQuantity === 0 ) {
-		 		elements[index].style.marginRight = "0";
+			this.init = () => {
+
+				let config = $.extend({}, defaults, options);
+
+				var marginRight = (elements, count) => {
+					elements.each( (index) => { elements[index].style.marginRight = count+"px" } );
+					marginRightZero(elements);
+				};
+
+				var marginRightZero = (elements) => {
+					let elementsQuantity = Math.ceil( config.tab_content.width() / config.tab_elem.width() - 1) ;
+					elements.each( (index) => {
+					 	if ( ( index + 1 ) % elementsQuantity === 0 ) {
+					 		elements[index].style.marginRight = "0";
+						};
+					});
+				};
+
+				var addTabContent = () => {
+				
+					config.tab_links.click( function(e) {
+						
+						let tab_id = $(this).attr('data-tab');
+						let tabClass = $('.'+ tab_id);
+
+						e.preventDefault();
+
+						config.tab_content.children().each( function() {
+							if(tab_id != 'all') {
+								$(this).hide();
+							} else {
+								$(this).show();
+								marginRight(config.tab_elem, 20);
+							}
+						});
+
+						tabClass.css('display','block');	
+
+						marginRight(tabClass,20);
+
+					});
+				};
+
+				addTabContent(); 
+
+				$(window).resize( () => {
+					marginRight(config.tab_elem, 20);
+				});
+
 			};
-		});
-	};
 
-	var addTabContent = () => {
-	
-		$('.tab_links ul li a').click( function(e) {
-			
-			let tab_id = $(this).attr('data-tab');
-			let tabClass = $('.'+ tab_id);
+			this.init();
 
-			e.preventDefault();
+			return this
 
-			tab_content.children().each( function() {
-				if(tab_id != 'all') {
-					$(this).hide();
-				} else {
-					$(this).show();
-					marginRight(tab_elem, 20);
-				}
-			});
+		};
 
-			tabClass.css('display','block');	
+	})(jQuery);
 
-			marginRight(tabClass,20);
+	$('.gallery').galleryCollection();
 
-		});
-	};
+	/*--- Placeholder ---*/
 
-	addTabContent(); 
-
-	$(window).resize( () => {
-		marginRight(tab_elem, 20);
+	$('input, textarea').focusin(function(){
+		let input = $(this);
+		input.data('place-holder-text', input.attr('placeholder'))
+		input.attr('placeholder', '');
 	});
 
-	
+	$('input, textarea').focusout(function(){
+		let input = $(this);
+		input.attr('placeholder', input.data('place-holder-text'));
+	});
+
 
 });
