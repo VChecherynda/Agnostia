@@ -140,7 +140,7 @@ section {
   section#about {
     background: url(../img/bg-about.jpg);
     background-size: cover; }
-    section#about ul li:hover, section#about ul li.active {
+    section#about header ul li:hover, section#about header ul li.active {
       background-color: #91778e; }
     section#about .header_box {
       margin-bottom: 58px; }
@@ -183,7 +183,7 @@ section {
         section#about .services-box-sm .social li a {
           display: inline-block;
           width: 31px;
-          height: 31px; }
+          height: 30px; }
       section#about .services-box-sm .social li:nth-child(1) a {
         background: url("../img/bg-social.png") 0px 0; }
       section#about .services-box-sm .social li:nth-child(1):hover a {
@@ -416,6 +416,17 @@ section {
       display: inline-block;
       width: 60px;
       height: 60px;
-      background: #82c8bd; }
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      background: #82c8bd;
+      vertical-align: middle; }
+      .social_links ul li:hover {
+        background: #fff; }
+      .social_links ul li:hover i {
+        color: #82C8BD; }
+      .social_links ul li a i {
+        font-size: 30px;
+        line-height: 2;
+        color: #fff; }
     .social_links ul li + li {
       margin-left: 40px; }

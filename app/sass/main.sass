@@ -226,12 +226,14 @@ section
 		background: url(../img/bg-about.jpg)
 		background-size: cover	
 
-		ul
-	
-			li
+		header
 
-				&:hover,&.active
-					background-color: $color-about
+			ul
+		
+				li
+
+					&:hover,&.active
+						background-color: $color-about
 
 		.header_box
 			margin-bottom: 58px			
@@ -284,7 +286,7 @@ section
 					a
 						display: inline-block
 						width: 31px
-						height: 31px
+						height: 30px
 
 				$param : 31px
 
@@ -542,7 +544,23 @@ section
 			display: inline-block
 			width: 60px
 			height: 60px
+			border-radius: 50%
 			background: #82c8bd
+			vertical-align: middle
+
+			&:hover
+				background: #fff	
+
+			&:hover i
+				color: #82C8BD	
+
+			a
+				i 
+					font-size: 30px
+					line-height: 2
+					color: #fff
+
+
 
 		li + li
 			margin-left: 40px	
