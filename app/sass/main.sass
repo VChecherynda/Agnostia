@@ -4,6 +4,11 @@ $color-home: #74c7d5
 $color-services: #df5c64
 $color-about: #91778e
 $color-about-popup: #91778e
+$color-about-social: #A1859E
+$color-about-social-hover-1: #4F689E
+$color-about-social-hover-2: #74C7D5
+$color-about-social-hover-3: #DF5C64
+$color-about-social-hover-4: #3E61AF
 $color-work: #a1ca6c
 $color-work-portfolio-menu-hover: #a1ca6c
 $color-contact: #82c8bd
@@ -282,20 +287,21 @@ section
 
 				li
 					display: inline-block
+					width: 30px
+					height: 30px
+					background: $color-about-social
+					border-radius: 50%
+					line-height: 30px
 
 					a
-						display: inline-block
-						width: 31px
-						height: 30px
-
-				$param : 31px
-
-				@for $i from 1 through 4 
-				    li:nth-child(#{$i}) a 
-				    	background: url('../img/bg-social.png') #{$param * ($i - 1) } 0
-				    li:nth-child(#{$i}):hover a 
-				    	background: url('../img/bg-social.png') #{$param * ($i - 1) } #{$param}	
+						color: #fff
 	
+				$list: $color-about-social-hover-1, $color-about-social-hover-2, $color-about-social-hover-3, $color-about-social-hover-4;	
+
+				@for $i from 1 through length($list) 
+				    li:nth-child(#{$i}):hover
+				    	background: nth($list, $i)	
+
 				li + li
 					margin-left: 19px
 			

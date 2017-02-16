@@ -179,27 +179,23 @@ section {
         font: 14px/1 'OpenSans-Bold', sans-serif;
         color: #a1ca6c; }
       section#about .services-box-sm .social li {
-        display: inline-block; }
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: #A1859E;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        line-height: 30px; }
         section#about .services-box-sm .social li a {
-          display: inline-block;
-          width: 31px;
-          height: 30px; }
-      section#about .services-box-sm .social li:nth-child(1) a {
-        background: url("../img/bg-social.png") 0px 0; }
-      section#about .services-box-sm .social li:nth-child(1):hover a {
-        background: url("../img/bg-social.png") 0px 31px; }
-      section#about .services-box-sm .social li:nth-child(2) a {
-        background: url("../img/bg-social.png") 31px 0; }
-      section#about .services-box-sm .social li:nth-child(2):hover a {
-        background: url("../img/bg-social.png") 31px 31px; }
-      section#about .services-box-sm .social li:nth-child(3) a {
-        background: url("../img/bg-social.png") 62px 0; }
-      section#about .services-box-sm .social li:nth-child(3):hover a {
-        background: url("../img/bg-social.png") 62px 31px; }
-      section#about .services-box-sm .social li:nth-child(4) a {
-        background: url("../img/bg-social.png") 93px 0; }
-      section#about .services-box-sm .social li:nth-child(4):hover a {
-        background: url("../img/bg-social.png") 93px 31px; }
+          color: #fff; }
+      section#about .services-box-sm .social li:nth-child(1):hover {
+        background: #4F689E; }
+      section#about .services-box-sm .social li:nth-child(2):hover {
+        background: #74C7D5; }
+      section#about .services-box-sm .social li:nth-child(3):hover {
+        background: #DF5C64; }
+      section#about .services-box-sm .social li:nth-child(4):hover {
+        background: #3E61AF; }
       section#about .services-box-sm .social li + li {
         margin-left: 19px; }
       section#about .services-box-sm .icon {
