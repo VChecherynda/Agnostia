@@ -102,5 +102,14 @@ $(document).ready(function(){
 		input.attr('placeholder', input.data('place-holder-text'));
 	});
 
+});
 
+/*--- Smooth scroll to the anchor ---*/
+
+$(document).on('click','a', function(e){
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop: $($.attr(this, 'href') ).offset().top
+	}, 500);
 });
