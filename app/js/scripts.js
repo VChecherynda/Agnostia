@@ -71,6 +71,8 @@ $(document).ready(function(){
 					});
 				};
 
+				marginRightZero(config.tab_elem, 20);
+
 				addTabContent(); 
 
 				$(window).resize( () => {
@@ -112,4 +114,5 @@ $(document).on('click','a', function(e){
 	$('html, body').animate({
 		scrollTop: $($.attr(this, 'href') ).offset().top
 	}, 500);
+
 });
