@@ -150,10 +150,11 @@ section
 				.item
 					display: block
 					width: 840px
-					height: 170px
+					min-height: 170px
 					margin: 0 auto
 					border-radius: 3px
 					background: rgba(255,255,255,0.3)
+					overflow: hidden
 
 					h1
 						display: inline-block
@@ -182,12 +183,14 @@ section
 				top: 0
 
 			.owl-next
-				top: 57px
+				top: 50%
+				transform: translateY(-50%)
 				right: 48px
 				background: url(../img/arrow-right.png)	
 
 			.owl-prev
-				top: 57px
+				top: 50%
+				transform: translateY(-50%)
 				left: 48px
 				background: url(../img/arrow-left.png)	
 
