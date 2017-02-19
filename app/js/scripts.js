@@ -26,8 +26,6 @@ $(document).ready(function(){
 
 		$.fn.galleryCollection = function(options) {
 
-			console.log(this);
-
 			this.init = () => {
 
 				let config = $.extend({}, defaults, options);
@@ -104,15 +102,22 @@ $(document).ready(function(){
 		input.attr('placeholder', input.data('place-holder-text'));
 	});
 
+	/*--- Add class responsive ---*/
+
+	$('header ul li.icon').click(function(){
+				
+		$(this).parent().toggleClass('responsive');
+	});
+
 });
 
 /*--- Smooth scroll to the anchor ---*/
 
-$(document).on('click','a', function(e){
+$(document).on('click','a:not(:last-child)', function(e){
 	e.preventDefault();
 
 	$('html, body').animate({
-		scrollTop: $($.attr(this, 'href') ).offset().top
+		scrollTop: $($.attr(this, 'href')).offset().top
 	}, 500);
 
 });

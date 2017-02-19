@@ -36,6 +36,8 @@ section {
         font: 18px/1.5 'Regular', sans-serif;
         font-size: 18px;
         color: #fff; }
+    section header ul li.icon {
+      display: none; }
     section header ul li + li {
       margin-left: 8px; }
   section .header_box {
