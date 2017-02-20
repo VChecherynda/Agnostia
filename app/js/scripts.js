@@ -113,13 +113,19 @@ $(document).ready(function(){
 
 /*--- Smooth scroll to the anchor ---*/
 
-$(document).on('click','a', function(e){
+$('header ul li:not(:last-child) a').click( function(e){
 	e.preventDefault();
 
 	$('html, body').animate({
 		scrollTop: $($.attr(this, 'href')).offset().top
-	}, 500, function(){
-		$('header ul').removeClass('responsive');
+	}, 500 , function() {
+
+		setTimeout(function(){
+            $('header ul').removeClass('responsive');
+      	}, 600);
+
 	});
 
+
 });
+
