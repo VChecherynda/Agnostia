@@ -51,4 +51,31 @@
             -ms-transform: translateY(50%);
                 transform: translateY(50%); }
     section#home .owl-dots .owl-dot span {
-      margin-right: 0 !important; } }
+      margin-right: 0 !important; }
+    section#work .gallery .tab_links {
+      text-align: center; }
+      section#work .gallery .tab_links h4 {
+        float: none; }
+      section#work .gallery .tab_links ul {
+        float: none; }
+        section#work .gallery .tab_links ul li {
+          float: none;
+          display: block;
+          width: 100%; }
+        section#work .gallery .tab_links ul li + li {
+          margin: 0; }
+    section#work .gallery .tab_content {
+      width: 260px;
+      margin: 0 auto; }
+    section#contact {
+      margin-bottom: 120px; }
+      section#contact form input[type="text"],
+      section#contact form textarea {
+        width: 100%; }
+  .social_links {
+    margin-top: -120px; }
+    .social_links ul li {
+      width: 30px;
+      height: 30px; }
+      .social_links ul li a i {
+        font-size: 15px; } }
